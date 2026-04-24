@@ -1,0 +1,41 @@
+@HostAddress = http://localhost:5149/api
+
+POST {{HostAddress}}/product
+Content-Type: application/json
+Accept: application/json
+{
+  "Category": "Electronics",
+  "Name": "IPhone 15",
+  "Price": 799.99,
+  "ManufacturedOn": "2026-03-18",
+  "InStock": true,
+  "Note": ""
+}
+
+###
+
+GET {{HostAddress}}/product
+Accept: application/json
+
+###
+GET {{HostAddress}}/product/2
+Accept: application/json
+
+###
+PUT {{HostAddress}}/product/3
+Content-Type: application/json
+Accept: application/json
+{
+  "Category": "Toys",
+  "Name": "Hot Wheels",
+  "Price": 99.99,
+  "ManufacturedOn": "2026-03-24",
+  "InStock": true,
+  "Note": ""
+}
+
+###
+DELETE {{HostAddress}}/product/3
+Accept: application/json
+
+###
